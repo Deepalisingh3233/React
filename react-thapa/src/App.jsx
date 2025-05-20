@@ -1,16 +1,11 @@
 // import React from "react";
-import NetflixSeries, { Footer, Header } from "./components/NetflixSeries"
+import NetflixSeries from "./components/NetflixSeries"
 
 
 export const App = () => {
   return (
     <>
-      <Header />
       <NetflixSeries/>
-      <NetflixSeries/>
-      <NetflixSeries/>
-      <NetflixSeries/>
-      <Footer />
     </>
   );
 };
