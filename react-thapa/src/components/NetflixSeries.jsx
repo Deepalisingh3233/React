@@ -1,31 +1,19 @@
 import seriesData from "../api/seriesData.json"
+import { SeriesCard } from "./SeriesCard";
 
 const NetflixSeries = () => {
 
      return (
-        <ul>
-            {
-                seriesData.map((curEle) => {
-    return (<li key={curEle.id}>
-      <div>
-        <img src={curEle.img_url} alt={curEle.name} width="40%" height="40%"/>
-      </div>
-      <h1>Name: {curEle.name}</h1>
-      <h3>Rating: {curEle.rating}</h3>
-      <p>Summary: {curEle.summary}</p>
-      <p>Genre: {curEle.genre}</p>
-      <p>Cast: {curEle.cast}</p>
-      <a href={curEle.watch_url} target="_blank">
-        <button>Watch Now</button>
-      </a>
-      {/* <button>{age >= 18 ? "Watch Now" : "Not Available"}</button> */}
-      {/* <button>{canWatch}</button> */}
-    </li>);
-                })
-            }
-
-    </ul>
+        <ul> 
+            {seriesData.map((curEle) => (
+            <SeriesCard key={curEle.id} curEle = {curEle}/>
+        ))} 
+        </ul>
   )
+}
+
+export default NetflixSeries;
+
 
 
   /* const name = "Queen of Tears";
@@ -61,6 +49,4 @@ const NetflixSeries = () => {
     )
   } */
  
-}
 
-export default NetflixSeries;
