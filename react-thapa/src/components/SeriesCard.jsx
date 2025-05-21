@@ -1,9 +1,12 @@
 import styles from "./Netflix.module.css";
+import styled from "styled-components";
 
 export const SeriesCard = ({ data }) => {
   const { img_url, name, rating, description, cast, genre, watch_url } = data;
 
-  const btn_style = {
+  // const btn_style = {};
+
+  const ButtonThapa = styled.button({
     padding: "1.2rem 2.4rem",
     border: "none",
     fontSize: "1.6rem",
@@ -11,7 +14,17 @@ export const SeriesCard = ({ data }) => {
     color: "#000",
     fontWeight: "bold",
     cursor: "pointer"
-  };
+  })
+
+ /*  const ButtonThapa = styled.button`
+    padding: 1.2rem 2.4rem;
+    border: none;
+    fontSize: 1.6rem;
+    background-color: `${rating >= 8.5 ? #a0cf74 : #eeec65}`;
+    color: #000;
+    fontWeight: bold;
+    cursor: pointer
+  ` */
 
   const ratingClass = rating >= 8.5 ? styles.super_hit : styles.average;
 
@@ -29,7 +42,8 @@ export const SeriesCard = ({ data }) => {
         <p>Genre: {genre}</p>
         <p>Cast: {cast}</p>
         <a href={watch_url} target="_blank">
-          <button style={btn_style}>Watch Now</button>
+          {/* <button style={btn_style}>Watch Now</button> */}
+          <ButtonThapa>Watch Now</ButtonThapa>
         </a>
       </div>
     </li>
