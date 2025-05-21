@@ -17,3 +17,22 @@ img {
 .card-heading {
     margin-bottom: 3.2rem;
 }
+
+.super-hit{
+    background-color: #a0cf74;
+}
+
+.average {
+    background-color: #eeec65;
+}
+
+.rating {
+    padding: 0.3rem 1.5rem;
+    color: #000;
+    margin-left: 1.2rem;
+    border-radius: 100rem;
+    -webkit-border-radius: 100rem;
+    -moz-border-radius: 100rem;
+    -ms-border-radius: 100rem;
+    -o-border-radius: 100rem;
+}
